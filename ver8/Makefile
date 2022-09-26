@@ -1,4 +1,4 @@
-CXX = icpc
+CXX = icpx
 COMPFLAGS = -g -std=c++11 -O2 -qopenmp
 OPTFLAGS = -xCORE-AVX512 -qopt-zmm-usage=high
 

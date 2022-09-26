@@ -139,13 +139,14 @@ void GSimulation :: start()
    ts0 += time.start(); 
    for (i = 0; i < n; i++)// update acceleration
    {
-     __assume_aligned(particles->pos_x, alignment);
-     __assume_aligned(particles->pos_y, alignment);
-     __assume_aligned(particles->pos_z, alignment);
-     __assume_aligned(particles->acc_x, alignment);
-     __assume_aligned(particles->acc_y, alignment);
-     __assume_aligned(particles->acc_z, alignment);
-     __assume_aligned(particles->mass, alignment);
+
+	 particles->pos_x = (real_type*)__builtin_assume_aligned(particles->pos_x, alignment);
+     particles->pos_y = (real_type*)__builtin_assume_aligned(particles->pos_y, alignment);
+     particles->pos_z = (real_type*)__builtin_assume_aligned(particles->pos_z, alignment);
+     particles->acc_x = (real_type*)__builtin_assume_aligned(particles->acc_x, alignment);
+     particles->acc_y = (real_type*)__builtin_assume_aligned(particles->acc_y, alignment);
+     particles->acc_z = (real_type*)__builtin_assume_aligned(particles->acc_z, alignment);
+     particles->mass = (real_type*)__builtin_assume_aligned(particles->mass, alignment);
 
      real_type ax_i = particles->acc_x[i];
      real_type ay_i = particles->acc_y[i];

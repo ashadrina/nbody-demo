@@ -1,4 +1,4 @@
-CXX = icpc
+CXX = icpx
 COMPFLAGS =  -g -std=c++11 -O2
  INCLUDES = 
 
