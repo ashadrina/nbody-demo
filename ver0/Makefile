@@ -9,9 +9,9 @@ SOURCES = GSimulation.cpp main.cpp
 ADVPRJ = "./adv-ver0"
 
 ifeq ($(REPORT), yes)
-	CXXFLAGS+=-qopt-report=5
-ifeq ($(FILTER), yes) 
-	CXXFLAGS+=-qopt-report-phase=vec -qopt-report-filter="GSimulation.cpp,125-175"
+	CXXFLAGS+=-qopt-report=3
+#ifeq ($(FILTER), yes) 
+	#CXXFLAGS+=-qopt-report-phase=vec -qopt-report-filter="GSimulation.cpp,125-175"
 endif
 endif
 
