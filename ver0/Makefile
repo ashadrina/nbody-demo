@@ -12,7 +12,7 @@ ifeq ($(REPORT), yes)
 	CXXFLAGS+=-qopt-report=3
 #ifeq ($(FILTER), yes) 
 	#CXXFLAGS+=-qopt-report-phase=vec -qopt-report-filter="GSimulation.cpp,125-175"
-endif
+#endif
 endif
 
 .SUFFIXES: .o .cpp
